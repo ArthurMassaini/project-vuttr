@@ -1,13 +1,9 @@
 // import * as api from '../services/api';
 
-const SIGN_IN = 'SIGN_IN';
+const FILTERS = 'FILTERS';
 
-export const signIn = (email) => ({
-  type: SIGN_IN,
-  payload: email,
-});
-
-export const signOut = (email) => ({
-  type: SIGN_IN,
-  payload: email,
+export const setFilters = (filterText, filterTag) => ({
+  type: FILTERS,
+  filterText,
+  filterTag,
 });

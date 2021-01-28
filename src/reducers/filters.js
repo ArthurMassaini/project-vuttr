@@ -1,12 +1,18 @@
-const SIGN_IN = 'SIGN_IN';
+const FILTERS = 'FILTERS';
 
 const INITIAL_STATE = {
+  filterText: '',
+  filterTag: false,
 };
 
 const filters = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case SIGN_IN:
-      return { ...state, email: action.payload };
+    case FILTERS:
+      return {
+        ...state,
+        filterText: action.filterText,
+        filterTag: action.filterTag,
+      };
     default:
       return state;
   }

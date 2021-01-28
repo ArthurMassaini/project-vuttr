@@ -7,7 +7,6 @@ function Home() {
     <main>
       <Header />
       <SearchBar />
-      Home
     </main>
   );
 }
