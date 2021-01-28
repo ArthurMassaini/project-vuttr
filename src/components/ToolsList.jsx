@@ -11,7 +11,7 @@ function ToolsList() {
   }, [dataTools]);
 
   return (
-    <section>
+    <section className="list-section">
       {data.length > 0 ? (
         data.map((element) => <ToolsCard key={element.id} tool={element} />)
       ) : (

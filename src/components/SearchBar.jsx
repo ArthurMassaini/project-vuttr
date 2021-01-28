@@ -24,7 +24,7 @@ function SearchBar() {
   }, [state, dispatch]);
 
   return (
-    <section>
+    <section className="search-section">
       <form>
         <input
           type="text"
