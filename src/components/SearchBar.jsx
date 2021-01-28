@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import * as Actions from '../actions/index';
 
@@ -18,7 +18,10 @@ function SearchBar() {
     });
   };
 
-  const handleClick = () => {};
+  useEffect(() => {
+    const { search, tag } = state;
+    dispatch(Actions.setFilters(search, tag));
+  }, [state, dispatch]);
 
   return (
     <section>
@@ -39,9 +42,7 @@ function SearchBar() {
             onChange={handleChange}
           />
         </label>
-        <button type="button" onClick={handleClick}>
-          Add
-        </button>
+        <button type="button">Add</button>
       </form>
     </section>
   );
